@@ -1,0 +1,105 @@
+/*Loading panel*/
+#load-cont {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+#load-ico,
+.load-icon {
+	background: url(../../app/assets/icons/loading/loading.svg) center / contain no-repeat;
+	width: 5rem;
+	height: 5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+}
+
+/*Entrances*/
+.load {
+	opacity: 0 !important;
+}
+
+.load.ld-lef {
+	transform: translateX(-4rem);
+}
+.ld-lef {
+	transform: translateX(0);
+	transition: opacity 0.7s ease-in, transform 0.7s;
+}
+
+.load.ld-rig {
+	transform: translateX(4rem);
+}
+.ld-rig {
+	transform: translateX(0);
+	transition: opacity 0.7s ease-in, transform 0.7s;
+}
+
+.load.ld-top {
+	transform: translateY(-4rem);
+}
+.ld-top {
+	transform: translateY(0);
+	transition: opacity 0.7s ease-in, transform 0.7s;
+}
+
+.load.ld-bot {
+	transform: translateY(4rem);
+}
+.ld-bot {
+	transform: translateY(0);
+	transition: opacity 0.7s ease-in, transform 0.7s;
+}
+
+/*Zoom*/
+.load.ld-bgr-out {
+	transform: scale(1);
+}
+.ld-bgr-out {
+	transform: scale(1.1);
+	transition: transform 0.7s ease-out;
+}
+
+.load.ld-bgr-in {
+	transform: scale(1.1);
+}
+.ld-bgr-in {
+	transform: scale(1);
+	transition: transform 0.7s ease-out;
+}
+
+/*Delay*/
+.ld-del1 {
+	transition-delay: 0.1s;
+}
+.ld-del2 {
+	transition-delay: 0.2s;
+}
+.ld-del3 {
+	transition-delay: 0.3s;
+}
+.ld-del4 {
+	transition-delay: 0.4s;
+}
+.ld-del5 {
+	transition-delay: 0.5s;
+}
+.ld-del6 {
+	transition-delay: 0.6s;
+}
+.ld-del7 {
+	transition-delay: 0.7s;
+}
+.ld-del8 {
+	transition-delay: 0.8s;
+}
+.ld-del9 {
+	transition-delay: 0.9s;
+}
+.ld-del10 {
+	transition-delay: 1s;
+}

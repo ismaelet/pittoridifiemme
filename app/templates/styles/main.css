@@ -1,0 +1,13 @@
+/*
+* Layout
+*/
+.page-container {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 1025px) {
+	.page-container {
+		grid-template-columns: max-content minmax(0, 1fr);
+	}
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.4",
+    "tilt.js": "^1.2.1"
+  }
+}
