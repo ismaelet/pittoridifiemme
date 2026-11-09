@@ -39,16 +39,18 @@ $sysConfig = array(
 	'logged_page' => '/admin',
 );
 
-if (in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1'])) {
-	// local server settings
-	$sysConfig['hostname'] = 'localhost';
-	$sysConfig['database'] = 'hostinger_pittoridifiemme';
-	$sysConfig['username'] = 'root';
-	$sysConfig['password'] = '';
-} else {
-	// live server settings
-	$sysConfig['hostname'] = 'localhost';
-	$sysConfig['database'] = 'u907921565_pittoridif';
-	$sysConfig['username'] = 'u907921565_pittoridif';
-	$sysConfig['password'] = '4Nv]O^ut=nx';
-}
+// Project root
+$rootPath = dirname(__DIR__, 2);
+
+// Load Composer dependencies
+require_once $rootPath . '/vendor/autoload.php';
+
+// Load environment variables
+$dotenv = Dotenv\Dotenv::createImmutable($rootPath);
+$dotenv->safeLoad();
+
+// Database configuration
+$sysConfig['hostname'] = $_ENV['DB_HOST'] ?? 'localhost';
+$sysConfig['database'] = $_ENV['DB_DATABASE'] ?? '';
+$sysConfig['username'] = $_ENV['DB_USERNAME'] ?? '';
+$sysConfig['password'] = $_ENV['DB_PASSWORD'] ?? '';
