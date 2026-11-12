@@ -1,3 +1,11 @@
+/// <reference types="vite/client" />
+
+import.meta.glob("../images/**/*", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
 // Page entrance animations: reveal `.load` elements as they enter the viewport
 window.addEventListener("load", () => {
   const loader = document.getElementById("load-cont");
