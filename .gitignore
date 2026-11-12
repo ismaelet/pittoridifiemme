@@ -23,3 +23,5 @@
 
 # Ignore legacy files
 /legacy
+# Ignore user uploads
+/app/public/uploads

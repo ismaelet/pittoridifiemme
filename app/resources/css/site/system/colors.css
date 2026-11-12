@@ -1,0 +1,33 @@
+/* General colors */
+.bgr-wht {background-color: #FFF !important;}
+.bgr-wht-h:not(:disabled):hover {background-color: #FFF !important;}
+.bgr-blk {background-color: #000;}
+.bgr-blk-h:not(:disabled):hover {background-color: #000 !important;}
+.bgr-none {background-color: transparent !important;}
+
+.bgr-f3 {background-color: #f3f3f3 !important;}
+.bgr-eee {background-color: #eee !important;}
+.bgr-ddd {background-color: #ddd !important;}
+
+.br-wht {border-color: #FFF !important;}
+.br-wht-h:not(:disabled):hover {border-color: #FFF !important;}
+.br-blk {border-color: #000 !important;}
+.br-blk-h:not(:disabled):hover {border-color: #000 !important;}
+.br-blk-l {border-color: #333 !important;}
+
+.br-ddd {border-color: #ddd !important;}
+.br-aaa {border-color: #aaa !important;}
+.br-999 {border-color: #999 !important;}
+.br-555 {border-color: #555 !important;}
+
+.txt-wht {color: #FFF !important;}
+.txt-wht-h:hover, .txt-wht-h:active {color: #FFF !important;}
+.txt-blk {color: #000 !important;}
+.txt-blk-h:hover, .txt-blk-h:active {color: #000 !important;}
+.txt-blk-l {color: #333 !important;}
+.txt-blk-l-h:hover, .txt-blk-l-h:active {color: #333 !important;}
+
+.txt-eee {color: #eee !important;}
+.txt-aaa {color: #aaa !important;}
+.txt-555 {color: #555 !important;}
+.txt-222 {color: #222 !important;}

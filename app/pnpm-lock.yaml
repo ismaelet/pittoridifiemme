@@ -165,6 +165,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      vanilla-tilt:
+        specifier: ^1.8.1
+        version: 1.8.1
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.3.5
@@ -1137,6 +1141,9 @@ packages:
     engines: {node: '>=16.20.0'}
     hasBin: true
 
+  vanilla-tilt@1.8.1:
+    resolution: {integrity: sha512-hPB1XUsnh+SIeVSW2beb5RnuFxz4ZNgxjGD78o52F49gS4xaoLeEMh9qrQnJrnEn/vjjBI7IlxrrXmz4tGV0Kw==}
+
   vite-plugin-full-reload@1.2.0:
     resolution: {integrity: sha512-kz18NW79x0IHbxRSHm0jttP4zoO9P9gXh+n6UTwlNKnviTTEpOlum6oS9SmecrTtSr+muHEn5TUuC75UovQzcA==}
 
@@ -1835,6 +1842,8 @@ snapshots:
       '@typescript/typescript-sunos-x64': 7.0.2
       '@typescript/typescript-win32-arm64': 7.0.2
       '@typescript/typescript-win32-x64': 7.0.2
+
+  vanilla-tilt@1.8.1: {}
 
   vite-plugin-full-reload@1.2.0:
     dependencies:

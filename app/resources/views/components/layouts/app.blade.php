@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html
-	class="{{ $colorScheme }}"
-	lang="{{ $lang }}"
+    lang="{{ $lang }}"
+    data-theme="light"
 >
 
 <head>
-	<meta charset="utf-8">
-	<meta
-		name="viewport"
-		content="width=device-width, initial-scale=1"
-	>
-	<meta
-		name="description"
-		content="{{ $description }}"
-	>
-	<meta
-		property="og:image"
-		content="{{ $thumbnail }}"
-	>
-	<link
-		rel="icon"
-		href="{{ asset('favicon.ico') }}"
-	>
-	<title>
-		{{ $title }}
-	</title>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="{{ $description }}"
+    >
+    <meta
+        property="og:image"
+        content="{{ $thumbnail }}"
+    >
 
-	<livewire:styles />
+    <title>{{ $title }}</title>
 
-	@vite(['resources/css/app.css', 'resources/js/app.ts'])
-	@stack('styles')
-	@stack('scripts')
+    @vite(['resources/css/site.css', 'resources/js/site.ts'])
+    @stack('assets')
 
+    <link
+        rel="icon"
+        href="{{ asset('favicon.ico') }}"
+    >
 </head>
 
 <body>
-	{{ $slot }}
-
-	<livewire:scripts />
+    {{ $slot }}
 </body>
 
 </html>

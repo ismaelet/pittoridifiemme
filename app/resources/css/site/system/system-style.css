@@ -1,0 +1,272 @@
+/*
+* 1. Variables
+* 2. Setup
+	2.1. Resets
+	2.2. Basic settings
+* 3. Blocks
+	3.1 Wraps
+	3.2 Grids and flexboxes
+	3.3 Content placement
+	3.4 Content flow
+* 4. Elements
+	4.1 Buttons
+	4.2 Inputs
+	4.3 Checkboxes
+	4.4 Images
+	4.5 Videos
+	4.6 Icons
+* 5. Utilities
+	5.1. Generic
+	5.2. Size
+	5.3. Paddings and margins
+	5.4. Placement
+	5.5. Responsivity
+* 6. Typography
+	6.1 Elements
+	6.2 Modifiers
+	6.3 Colors
+*/
+
+/*
+* 1. Variables
+*/
+:root {
+	--wrap-outer-width: calc(var(--wrap-width) + var(--wrap-padding) * 2);
+
+	/* colors */
+	--clr-primary-200: hsl(var(--clr-primary-hsl-200));
+	--clr-primary-300: hsl(var(--clr-primary-hsl-300));
+	--clr-primary-400: hsl(var(--clr-primary-hsl-400));
+	--clr-primary-500: hsl(var(--clr-primary-hsl-500));
+	--clr-primary-700: hsl(var(--clr-primary-hsl-700));
+	--clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
+	--clr-secondary-500: hsl(var(--clr-secondary-hsl-500));
+
+	--clr-neutral-100: hsl(var(--clr-neutral-hsl-100));
+	--clr-neutral-150: hsl(var(--clr-neutral-hsl-150));
+	--clr-neutral-200: hsl(var(--clr-neutral-hsl-200));
+	--clr-neutral-300: hsl(var(--clr-neutral-hsl-300));
+	--clr-neutral-400: hsl(var(--clr-neutral-hsl-400));
+	--clr-neutral-500: hsl(var(--clr-neutral-hsl-500));
+	--clr-neutral-600: hsl(var(--clr-neutral-hsl-600));
+	--clr-neutral-700: hsl(var(--clr-neutral-hsl-700));
+	--clr-neutral-800: hsl(var(--clr-neutral-hsl-800));
+	--clr-neutral-900: hsl(var(--clr-neutral-hsl-900));
+
+	--clr-bgr: hsl(var(--clr-background-hsl));
+}
+
+@media (max-width: 480px) {
+	:root {
+		--wrap-padding: 1rem;
+	}
+}
+
+/* 2.2. Basic settings */
+body {
+	background-color: var(--clr-bgr);
+	color: var(--fc-400);
+	font-family: var(--ff-default);
+	font-size: var(--fs-400);
+	font-weight: var(--fs-400);
+	line-height: 1.6;
+}
+
+/* 3.2 Grids and flexboxes */
+.grid-flow {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	align-content: start;
+}
+
+.grid-flow[data-columns='2'] {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-flow[data-columns='15rem'] {
+	grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
+}
+
+.grid-flow[data-columns='20rem'] {
+	grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+}
+
+.grid-flow[data-columns='25rem'] {
+	grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
+}
+
+.grid-flow[data-columns='30rem'] {
+	grid-template-columns: repeat(auto-fill, minmax(min(30rem, 100%), 1fr));
+}
+
+.flex-group {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* 3.3 Content placement */
+.center-content {
+	text-align: center;
+}
+
+.center-content:where(.grid-flow) {
+	place-items: center;
+	align-content: normal;
+}
+
+.center-content:where(.flex-group) {
+	place-content: center;
+}
+
+.stack-content > * {
+	grid-row: 1;
+	grid-column: 1;
+	position: relative;
+}
+
+.grid-flow[data-justify='left'],
+.flex-group[data-justify='left'] {
+	justify-content: left;
+}
+
+.grid-flow[data-justify='right'],
+.flex-group[data-justify='right'] {
+	justify-content: right;
+}
+
+/* 3.4 Content flow */
+.grid-flow:where([data-spacing='200']),
+.flex-group:where([data-spacing='200']) {
+	gap: 0.5rem;
+}
+
+.grid-flow:where([data-spacing='300']),
+.flex-group:where([data-spacing='300']) {
+	gap: 0.75rem;
+}
+
+.grid-flow:where([data-spacing='400']),
+.flex-group:where([data-spacing='400']) {
+	gap: 1rem;
+}
+
+.grid-flow:where([data-spacing='500']),
+.flex-group:where([data-spacing='500']) {
+	gap: 1.25rem;
+}
+
+.grid-flow:where([data-spacing='600']),
+.flex-group:where([data-spacing='600']) {
+	gap: 1.5rem;
+}
+
+.grid-flow:where([data-spacing='700']),
+.flex-group:where([data-spacing='700']) {
+	gap: 2rem;
+}
+
+.grid-flow:where([data-spacing='800']),
+.flex-group:where([data-spacing='800']) {
+	gap: 4rem;
+}
+
+.grid-flow:where([data-spacing='900']),
+.flex-group:where([data-spacing='900']) {
+	gap: 7rem;
+}
+
+.grid-flow:where([data-spacing='1000']),
+.flex-group:where([data-spacing='1000']) {
+	gap: 10rem;
+}
+
+.grid-flow:where([data-column-spacing='200']),
+.flex-group:where([data-column-spacing='200']) {
+	column-gap: 0.5rem;
+}
+
+.grid-flow:where([data-column-spacing='300']),
+.flex-group:where([data-column-spacing='300']) {
+	column-gap: 0.75rem;
+}
+
+.grid-flow:where([data-column-spacing='400']),
+.flex-group:where([data-column-spacing='400']) {
+	column-gap: 1rem;
+}
+
+.grid-flow:where([data-column-spacing='500']),
+.flex-group:where([data-column-spacing='500']) {
+	column-gap: 1.25rem;
+}
+
+.grid-flow:where([data-column-spacing='600']),
+.flex-group:where([data-column-spacing='600']) {
+	column-gap: 1.5rem;
+}
+
+.grid-flow:where([data-column-spacing='700']),
+.flex-group:where([data-column-spacing='700']) {
+	column-gap: 2rem;
+}
+
+.grid-flow:where([data-column-spacing='800']),
+.flex-group:where([data-column-spacing='800']) {
+	column-gap: 4rem;
+}
+
+.grid-flow:where([data-column-spacing='900']),
+.flex-group:where([data-column-spacing='900']) {
+	column-gap: 7rem;
+}
+
+.grid-flow:where([data-column-spacing='1000']),
+.flex-group:where([data-column-spacing='1000']) {
+	column-gap: 10rem;
+}
+
+.grid-flow:where([data-row-spacing='200']),
+.flex-group:where([data-row-spacing='200']) {
+	row-gap: 0.5rem;
+}
+
+.grid-flow:where([data-row-spacing='300']),
+.flex-group:where([data-row-spacing='300']) {
+	row-gap: 0.75rem;
+}
+
+.grid-flow:where([data-row-spacing='400']),
+.flex-group:where([data-row-spacing='400']) {
+	row-gap: 1rem;
+}
+
+.grid-flow:where([data-row-spacing='500']),
+.flex-group:where([data-row-spacing='500']) {
+	row-gap: 1.25rem;
+}
+
+.grid-flow:where([data-row-spacing='600']),
+.flex-group:where([data-row-spacing='600']) {
+	row-gap: 1.5rem;
+}
+
+.grid-flow:where([data-row-spacing='700']),
+.flex-group:where([data-row-spacing='700']) {
+	row-gap: 2rem;
+}
+
+.grid-flow:where([data-row-spacing='800']),
+.flex-group:where([data-row-spacing='800']) {
+	row-gap: 4rem;
+}
+
+.grid-flow:where([data-row-spacing='900']),
+.flex-group:where([data-row-spacing='900']) {
+	row-gap: 7rem;
+}
+
+.grid-flow:where([data-row-spacing='1000']),
+.flex-group:where([data-row-spacing='1000']) {
+	row-gap: 10rem;
+}
