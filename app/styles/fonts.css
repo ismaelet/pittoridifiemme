@@ -1,9 +1,0 @@
-/* Fonts */
-@font-face {font-family: 'main'; src: url(/app/resources/fonts/lato-regular.ttf);}
-@font-face {font-family: 'main-ita'; src: url(/app/resources/fonts/lato-light-italic.ttf);}
-@font-face {font-family: 'main-light'; src: url(/app/resources/fonts/lato-light.ttf);}
-@font-face {font-family: 'main-thin'; src: url(/app/resources/fonts/lato-thin.ttf);}
-@font-face {font-family: 'main-bold'; src: url(/app/resources/fonts/lato-black.ttf);}
-@font-face {font-family: 'text'; src: url(/app/resources/fonts/opensans-regular.ttf);}
-@font-face {font-family: 'text-italic'; src: url(/app/resources/fonts/opensans-regular-italic.ttf);}
-@font-face {font-family: 'text-thin'; src: url(/app/resources/fonts/opensans-thin.ttf);}

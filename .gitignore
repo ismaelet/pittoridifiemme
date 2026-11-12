@@ -1,6 +1,25 @@
-/node_modules
-/uploads
-/vendor
-
+# Ignore environment and configuration files
 .env
+.s3cfg
+
+# Ignore database files
 *.sql
+
+# Ignore IDE settings
+/.vscode/settings.json
+
+# Ignore dependencies
+/app/node_modules
+/app/vendor
+
+# Ignore build artifacts
+/app/public/build
+/app/public/hot
+
+# Ignore storage files except for directories and .gitignore files
+/app/storage/*
+!/app/storage/**/
+!/app/storage/**/.gitignore
+
+# Ignore legacy files
+/legacy
