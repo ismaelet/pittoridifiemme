@@ -1,9 +1,9 @@
 .inp {
-	background-color: #fff;
+  background-color: #fff;
 }
 
 .mbtn {
-	background-color: #555;
-	box-shadow: 0 10px 20px rgba(0,0,0,.1);
-	color: #fff;
+  background-color: #555;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }

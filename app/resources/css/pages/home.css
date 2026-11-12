@@ -1,165 +1,169 @@
 /* Background */
 .bgr {
-	opacity: 0.2;
-	position: fixed;
-	background-position: 50% 30%;
+  opacity: 0.2;
+  position: fixed;
+  background-position: 50% 30%;
 }
 
 /* Containers */
 main {
-	background-color: #111;
+  background-color: #111;
 }
 
 @media (max-width: 1024px) {
-	header {
-		position: absolute;
-		width: 100%;
-	}
+  header {
+    position: absolute;
+    width: 100%;
+  }
 }
 
 /* Artists */
 #artists-sec {
-	padding-top: 7rem;
+  padding-top: 7rem;
 }
 
 #art_cont {
-	padding: 3rem 0;
-	font-size: 0;
+  padding: 3rem 0;
+  font-size: 0;
 }
 
 #artists-title {
-	margin-bottom: 4rem;
-	color: #eee;
-	font-size: 3rem;
-	font-variant: small-caps;
-	letter-spacing: 0.1em;
+  margin-bottom: 4rem;
+  color: #eee;
+  font-size: 3rem;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
 }
 
 @media (min-width: 1025px) {
-	#artists-title {
-		display: none;
-	}
+  #artists-title {
+    display: none;
+  }
 }
 
 #artists-title .txt-thin {
-	font-style: italic;
+  font-style: italic;
 }
 
 #title-line {
-	display: none;
+  display: none;
 }
 
 #titl_hist {
-	padding-left: 0.5rem;
-	font-size: 5rem;
-	letter-spacing: 0.05em;
-	top: 2rem;
-	z-index: 1;
-	color: #202020 !important;
-	text-align: center;
-	text-shadow: 1px 1px 0 hsla(0, 0%, 100%, 1), -1px 1px 0 hsla(0, 0%, 100%, 1), 1px -1px 0 hsla(0, 0%, 100%, 1), -1px -1px 0 hsla(0, 0%, 100%, 1);
+  padding-left: 0.5rem;
+  font-size: 5rem;
+  letter-spacing: 0.05em;
+  top: 2rem;
+  z-index: 1;
+  color: #202020 !important;
+  text-align: center;
+  text-shadow:
+    1px 1px 0 hsla(0, 0%, 100%, 1),
+    -1px 1px 0 hsla(0, 0%, 100%, 1),
+    1px -1px 0 hsla(0, 0%, 100%, 1),
+    -1px -1px 0 hsla(0, 0%, 100%, 1);
 }
 
 .artist {
-	padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .artist-img {
-	background-color: #333;
-	background-position: center;
-	background-size: cover;
-	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0);
-	padding-bottom: 160%;
-	transition: box-shadow 0.3s;
+  background-color: #333;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0);
+  padding-bottom: 160%;
+  transition: box-shadow 0.3s;
 }
 
 .art_box:hover .img {
-	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
 }
 
 .art {
-	padding-top: 0.3rem;
-	color: #eee;
-	letter-spacing: 0.1em;
-	line-height: 1.6;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
+  padding-top: 0.3rem;
+  color: #eee;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .art-desc {
-	color: #666;
-	transition: color 0.3s;
+  color: #666;
+  transition: color 0.3s;
 }
 
 .art_box:hover .art-desc {
-	color: #eee;
+  color: #eee;
 }
 
 @media (max-width: 768px) {
-	#artists-sec .wrap {
-		padding: 0 2rem;
-	}
+  #artists-sec .wrap {
+    padding: 0 2rem;
+  }
 }
 
 @media only screen and (max-width: 550px) {
-	#titl_art {
-		font-size: 2.7rem;
-		letter-spacing: 0.15em;
-	}
+  #titl_art {
+    font-size: 2.7rem;
+    letter-spacing: 0.15em;
+  }
 }
 
 @media only screen and (max-width: 550px) {
-	#titl_art {
-		font-size: 2.5rem;
-		letter-spacing: 0.05em;
-	}
+  #titl_art {
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+  }
 }
 
 @media only screen and (max-width: 550px) {
-	.art_box {
-		width: 50%;
-	}
+  .art_box {
+    width: 50%;
+  }
 }
 
 /*SECTION: history*/
 #sect_hist {
-	padding: 2rem 0 0 0;
+  padding: 2rem 0 0 0;
 }
 
 #hist_titl {
-	padding: 1rem 1rem;
-	font-size: 1.7rem;
-	letter-spacing: 0.05em;
-	text-align: center;
+  padding: 1rem 1rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+  text-align: center;
 }
 
 #hist-txt {
-	padding: 4rem 3rem;
-	font-size: 0.9rem;
-	line-height: 2;
-	text-align: justify;
+  padding: 4rem 3rem;
+  font-size: 0.9rem;
+  line-height: 2;
+  text-align: justify;
 }
 
 #hist_txt br {
-	display: block;
-	margin-top: 0.5rem;
+  display: block;
+  margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 550px) {
-	#hist_txt {
-		padding: 2rem;
-	}
+  #hist_txt {
+    padding: 2rem;
+  }
 }
 
 /*SECTION CREDITS*/
 #sect_cred {
-	background-color: #fff;
-	padding: 3rem 1rem;
-	text-align: center;
+  background-color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
 }
 
 .cred {
-	font-size: 0.9rem;
-	line-height: 2;
+  font-size: 0.9rem;
+  line-height: 2;
 }

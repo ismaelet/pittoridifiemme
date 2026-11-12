@@ -1,88 +1,88 @@
 /* Fonts (self-hosted) */
 @font-face {
-	font-family: 'Lato';
-	font-weight: 100;
-	font-style: normal;
-	font-display: swap;
-	src: url(/resources/fonts/lato-thin.ttf) format('truetype');
+  font-family: "Lato";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url(/resources/fonts/lato-thin.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'Lato';
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-	src: url(/resources/fonts/lato-light.ttf) format('truetype');
+  font-family: "Lato";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url(/resources/fonts/lato-light.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'Lato';
-	font-weight: 300;
-	font-style: italic;
-	font-display: swap;
-	src: url(/resources/fonts/lato-light-italic.ttf) format('truetype');
+  font-family: "Lato";
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url(/resources/fonts/lato-light-italic.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'Lato';
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-	src: url(/resources/fonts/lato-regular.ttf) format('truetype');
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(/resources/fonts/lato-regular.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'Lato';
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-	src: url(/resources/fonts/lato-regular-italic.ttf) format('truetype');
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url(/resources/fonts/lato-regular-italic.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'Lato';
-	font-weight: 700 900;
-	font-style: normal;
-	font-display: swap;
-	src: url(/resources/fonts/lato-black.ttf) format('truetype');
+  font-family: "Lato";
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+  src: url(/resources/fonts/lato-black.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-	src: url(/resources/fonts/opensans-light.ttf) format('truetype');
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url(/resources/fonts/opensans-light.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	font-weight: 300;
-	font-style: italic;
-	font-display: swap;
-	src: url(/resources/fonts/opensans-light-italic.ttf) format('truetype');
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url(/resources/fonts/opensans-light-italic.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-	src: url(/resources/fonts/opensans-regular.ttf) format('truetype');
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(/resources/fonts/opensans-regular.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-	src: url(/resources/fonts/opensans-regular-italic.ttf) format('truetype');
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url(/resources/fonts/opensans-regular-italic.ttf) format("truetype");
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	font-weight: 500 700;
-	font-style: normal;
-	font-display: swap;
-	src: url(/resources/fonts/opensans-bold.ttf) format('truetype');
+  font-family: "Open Sans";
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(/resources/fonts/opensans-bold.ttf) format("truetype");
 }

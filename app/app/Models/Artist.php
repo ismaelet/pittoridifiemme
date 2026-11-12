@@ -4,10 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Storage;
 
 class Artist extends Model
 {
     protected $primaryKey = 'ID';
+
+    protected static function booted(): void
+    {
+        // The legacy columns are NOT NULL, but forms submit empty fields as null.
+        static::saving(function (Artist $artist) {
+            foreach (['fname', 'lname', 'fname2', 'lname2', 'place', 'bio', 'date'] as $field) {
+                $artist->$field ??= '';
+            }
+        });
+
+        static::deleting(function (Artist $artist) {
+            $artist->images->each->delete();
+            Storage::disk('public')->delete('documents/'.$artist->ID.'.pdf');
+        });
+    }
 
     public $timestamps = false;
 
@@ -42,8 +58,8 @@ class Artist extends Model
 
     public function biographyUrl(): ?string
     {
-        if (file_exists(public_path('uploads/documents/'.$this->ID.'.pdf'))) {
-            return '/uploads/documents/'.$this->ID.'.pdf';
+        if (file_exists(Storage::disk('public')->path('documents/'.$this->ID.'.pdf'))) {
+            return '/storage/documents/'.$this->ID.'.pdf';
         }
 
         return $this->bio !== '' ? $this->bio : null;

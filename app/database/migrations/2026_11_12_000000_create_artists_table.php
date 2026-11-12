@@ -6,9 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    // Mirrors the legacy schema so the existing production data can be imported as is.
+    // Mirrors the legacy schema; skipped when the tables already exist (production).
     public function up(): void
     {
+        if (Schema::hasTable('artists')) {
+            return;
+        }
+
         Schema::create('artists', function (Blueprint $table) {
             $table->increments('ID');
             $table->string('fname', 30)->default('');

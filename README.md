@@ -32,6 +32,10 @@ The application follows a traditional server-rendered architecture, with PHP res
 
 Rather than relying on a framework, the project was implemented using the core capabilities of these technologies, providing hands-on experience with fundamental web development concepts.
 
+## Admin Panel
+
+The site is now a Laravel application. Content is managed from a Filament panel at `/admin` (login with email and password): artists (with biography URL or PDF), paintings (multi-upload, cover image). Uploaded files live in `app/storage/app/public` and are served through the `public/storage` symlink (`php artisan storage:link`).
+
 ## Project Status
 
 **Archived / Portfolio Project**

@@ -11,15 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
-        });
+        // Same shape as the legacy table, which already exists in production.
+        if (! Schema::hasTable('users')) {
+            Schema::create('users', function (Blueprint $table) {
+                $table->increments('ID');
+                $table->string('username', 50);
+                $table->string('password', 128);
+                $table->string('email', 50);
+                $table->string('firstname', 50);
+                $table->string('lastname', 50);
+                $table->integer('admin')->default(0);
+                $table->string('fbID', 100)->default('0');
+                $table->string('security', 32)->default('');
+                $table->timestamp('time')->useCurrent();
+            });
+        }
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
